@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"go-learning/controllers"
+	// "go-learning/controllers"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -30,7 +30,7 @@ func getHealth(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/health", getHealth).Methods("GET")
-	r.HandleFunc("/auth", controllers.GetAuth).Methods("GET")
+	// r.HandleFunc("/auth", controllers.GetAuth).Methods("GET")
 	fmt.Println("Server is running on port 8080")
 
 	ch := make(chan string)
