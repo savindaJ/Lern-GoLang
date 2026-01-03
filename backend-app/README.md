@@ -51,3 +51,4 @@ go get gorm.io/gorm
 go get gorm.io/driver/postgres
 go get github.com/golang-jwt/jwt/v5
 go get go.uber.org/zap
+go install github.com/swaggo/swag/cmd/swag@latest && go get -u github.com/swaggo/gin-swagger github.com/swaggo/files

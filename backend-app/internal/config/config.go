@@ -6,12 +6,31 @@ type Config struct {
 	AppName string
 	AppEnv  string
 	AppPort string
+
+	// Database
+	DBHost     string
+	DBPort     string
+	DBUser     string
+	DBPassword string
+	DBName     string
 }
 
 func Load() *Config {
 	return &Config{
-		AppName: os.Getenv("APP_NAME"),
-		AppEnv:  os.Getenv("APP_ENV"),
-		AppPort: os.Getenv("APP_PORT"),
+		AppName:    getEnv("APP_NAME", "go-backend"),
+		AppEnv:     getEnv("APP_ENV", "development"),
+		AppPort:    getEnv("APP_PORT", "8080"),
+		DBHost:     getEnv("DB_HOST", "localhost"),
+		DBPort:     getEnv("DB_PORT", "3306"),
+		DBUser:     getEnv("DB_USER", "root"),
+		DBPassword: getEnv("DB_PASSWORD", ""),
+		DBName:     getEnv("DB_NAME", "go_backend"),
 	}
+}
+
+func getEnv(key, defaultValue string) string {
+	if value := os.Getenv(key); value != "" {
+		return value
+	}
+	return defaultValue
 }
