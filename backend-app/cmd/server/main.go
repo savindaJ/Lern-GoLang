@@ -4,10 +4,10 @@ import (
 	"log"
 
 	"github.com/joho/godotenv"
-	"github.com/yourname/go-backend/internal/server"
+	"github.com/savindaJ/backend-app/internal/server"
 	"go.uber.org/zap"
 
-	_ "github.com/yourname/go-backend/docs" // Swagger docs
+	_ "github.com/savindaJ/backend-app/docs" // Swagger docs
 )
 
 // @title           Go Backend API

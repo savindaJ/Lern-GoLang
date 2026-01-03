@@ -7,9 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"github.com/yourname/go-backend/internal/config"
-	"github.com/yourname/go-backend/internal/database"
-	"github.com/yourname/go-backend/internal/modules/user"
+	"github.com/savindaJ/backend-app/internal/config"
+	"github.com/savindaJ/backend-app/internal/database"
+	"github.com/savindaJ/backend-app/internal/modules/user"
 )
 
 func Start() {

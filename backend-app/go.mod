@@ -1,4 +1,4 @@
-module github.com/yourname/go-backend
+module github.com/savindaJ/backend-app
 
 go 1.25.5
 
